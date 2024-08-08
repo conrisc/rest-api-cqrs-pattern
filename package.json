@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "npx ts-node server.ts",
+    "dev": "nodemon server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint server.ts src",
     "format": "prettier . --write"
@@ -27,7 +27,9 @@
     "@types/node": "^22.2.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.4",
     "prettier": "3.3.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1"
   }
