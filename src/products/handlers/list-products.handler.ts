@@ -1,6 +1,6 @@
-import { LowdbService } from '../../infrastracture/database/lowdb'
-import { Product } from '../models/product.model'
-import { ListProductsQuery } from '../queries/list-products.query'
+import { LowdbService } from '../../infrastracture/database/lowdb.js'
+import { Product } from '../models/product.model.js'
+import { ListProductsQuery } from '../queries/list-products.query.js'
 
 export class ListProductsHandler {
 	async handle(query: ListProductsQuery): Promise<Product[]> {

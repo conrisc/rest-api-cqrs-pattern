@@ -2,7 +2,7 @@
   "name": "coffee-mug-recruitment-task",
   "version": "1.0.0",
   "description": "Coffee Mug recruitment task",
-  "main": "dist/server.js",
+  "exports": "./dist/server.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
@@ -14,6 +14,8 @@
   "keywords": [
     "recruitment"
   ],
+  "type": "module",
+  "engines": { "node": ">=18"},
   "author": "Konrad Cielecki",
   "license": "ISC",
   "dependencies": {

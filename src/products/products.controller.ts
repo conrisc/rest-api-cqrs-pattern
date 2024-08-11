@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
-import { ListProductsHandler } from './handlers/list-products.handler'
-import { ListProductsQuery } from './queries/list-products.query'
+import { ListProductsHandler } from './handlers/list-products.handler.js'
+import { ListProductsQuery } from './queries/list-products.query.js'
 
 export async function getProducts(req: Request, res: Response) {
 	const query = new ListProductsQuery()
