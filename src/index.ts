@@ -1,5 +1,6 @@
 import express from 'express'
 import productsRouter from './routes/products.routes.js'
+import ordersRouter from './routes/orders.routes.js'
 
 export const app = express()
 
@@ -10,3 +11,4 @@ app.get('/', (req, res) => {
 })
 
 app.use('/products', productsRouter)
+app.use('/orders', ordersRouter)
