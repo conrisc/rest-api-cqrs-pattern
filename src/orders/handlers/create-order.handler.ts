@@ -10,10 +10,6 @@ export class CreateOrderHandler {
 		const db = await LowdbService.getInstance()
 
 		const { customerId, products: orderedProducts } = command
-		if (!customerId) throw Error('"customerId" is required.')
-		if (orderedProducts.length === 0) throw Error('Cannot create order without "products".')
-		if (orderedProducts.some((it) => it.quantity <= 0))
-			throw Error("Cannot create order with a product's quantity below 1.")
 
 		const productSnapshots: ProductOrder[] = orderedProducts.map(({ productId, quantity }) => {
 			const product = db.data.products.find((it) => it.id === productId)

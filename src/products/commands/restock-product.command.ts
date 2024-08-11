@@ -1,6 +1,6 @@
 export class RestockProductCommand {
 	constructor(
-		public id: string,
+		public productId: string,
 		public restock: number
 	) {}
 }
