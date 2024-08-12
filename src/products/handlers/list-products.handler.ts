@@ -5,7 +5,7 @@ import { ListProductsQuery } from '../queries/list-products.query.js'
 export class ListProductsHandler {
 	async handle(query: ListProductsQuery): Promise<Product[]> {
 		console.log('Retrieving all products. Query', query)
-		const db = await LowdbService.getInstance() // TODO: should be injected once
+		const db = await LowdbService.getInstance()
 		return db.data.products
 	}
 }

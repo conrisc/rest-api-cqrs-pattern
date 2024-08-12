@@ -3,6 +3,7 @@ import { LowdbService } from '../../infrastracture/database/lowdb.js'
 import { CreateOrderCommand } from '../commands/create-order.command.js'
 import { Order, ProductOrder } from '../models/order.model.js'
 import { Product } from '../../products/models/product.model.js'
+import { BadRequestError, NotFoundError } from '../../errors/general-errors.js'
 
 export class CreateOrderHandler {
 	async execute(command: CreateOrderCommand): Promise<string> {
@@ -13,9 +14,9 @@ export class CreateOrderHandler {
 
 		const productSnapshots: ProductOrder[] = orderedProducts.map(({ productId, quantity }) => {
 			const product = db.data.products.find((it) => it.id === productId)
-			if (!product) throw Error(`Product with 'id=${productId}' doesn't exist.`)
+			if (!product) throw new NotFoundError(`Product with 'id=${productId}' doesn't exist.`)
 			if (product.stock < quantity)
-				throw Error(
+				throw new BadRequestError(
 					`Not enough products (id=${productId}) in stok. Ordered: ${quantity}. In stock: ${product.stock}.`
 				)
 
