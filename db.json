@@ -1,0 +1,72 @@
+{
+	"products": [
+		{
+			"id": "84b50ca1-c15d-46e7-bc0e-4c488b6042f3",
+			"name": "Umbrella",
+			"description": "Product description 876",
+			"price": 123,
+			"stock": 12
+		},
+		{
+			"id": "9dadd32a-b79d-471c-ac30-52b51b5cd28e",
+			"name": "Pencil A32",
+			"description": "Product description",
+			"price": 55.55,
+			"stock": 6
+		},
+		{
+			"id": "822bf323-85af-4182-a9b2-11e005c1b80f",
+			"name": "Laptop 321",
+			"description": "Product description",
+			"price": 2384.55,
+			"stock": 67
+		},
+		{
+			"id": "6eb1bf51-87b3-41a7-9c16-0df9d44e8624",
+			"name": "Nokia N95",
+			"description": "Phone with large screen",
+			"price": 432.12,
+			"stock": 35
+		},
+		{
+			"id": "485d0752-ce0d-4358-a6e1-ed060937c4bd",
+			"name": "Notepad",
+			"description": "Product description 873333333333333333333333333336",
+			"price": 5.2,
+			"stock": 45
+		},
+		{
+			"id": "9327670f-41a5-469b-89e5-35c16a947784",
+			"name": "Speakers",
+			"description": "Product description 33",
+			"price": 89.99,
+			"stock": 10
+		}
+	],
+	"orders": [
+		{
+			"id": "f71952aa-2af5-48b8-a343-f8b6b1c5740d",
+			"customerId": "532bf324-85af-4182-a9b2-11e005c1b801",
+			"products": [
+				{
+					"quantity": 5,
+					"product": {
+						"id": "822bf323-85af-4182-a9b2-11e005c1b80f",
+						"name": "Laptop 321",
+						"description": "Product description",
+						"price": 2384.55
+					}
+				},
+				{
+					"quantity": 10,
+					"product": {
+						"id": "84b50ca1-c15d-46e7-bc0e-4c488b6042f3",
+						"name": "Umbrella",
+						"description": "Product description 876",
+						"price": 123
+					}
+				}
+			]
+		}
+	]
+}
